@@ -1,0 +1,32 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0
+  hooks:
+  - id: check-yaml
+  - id: end-of-file-fixer
+  - id: trailing-whitespace
+
+{% if is_ruff %}
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.12.3
+  hooks:
+  - id: ruff-check
+    args: [--fix]
+  - id: ruff-format
+{% endif %}
+
+{% if is_mypy %}
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v1.17.0
+  hooks:
+  - id: mypy
+{% endif %}
+
+- repo: local
+  hooks:
+  - id: pytest
+    name: pytest
+    entry: pytest
+    language: system
+    pass_filenames: false
+    always_run: true

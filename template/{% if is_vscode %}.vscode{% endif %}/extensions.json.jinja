@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        {% if is_ruff %}
+        "charliermarsh.ruff",
+        {% endif %}
+        {% if is_mypy %}
+        "ms-python.mypy-type-checker",
+        {% endif %}
+        "mhutchie.git-graph",
+        "tamasfe.even-better-toml",
+        "goopware.raythis",
+        "ms-python.python"
+    ]
+}
