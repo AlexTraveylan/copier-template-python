@@ -8,15 +8,10 @@ dependencies = []
 
 [dependency-groups]
 dev = [
-    "pytest",
-    {% if is_ruff %}
-    "ruff",
-    {% endif %}
-    {% if is_mypy %}
-    "mypy",
-    {% endif %}
+    "pytest",{% if is_ruff %}
+    "ruff",{% endif %}{% if is_mypy %}
+    "mypy",{% endif %}
 ]
-
 {% if is_pytest %}
 # ===============
 # pytest
@@ -25,9 +20,7 @@ dev = [
 [tool.pytest.ini_options]
 pythonpath = ["."]
 addopts = ["-v", "-s"]
-testpaths = ["tests"]
-{% endif %}
-
+testpaths = ["tests"]{% endif %}
 {% if is_ruff %}
 # ===============
 # ruff
@@ -112,9 +105,7 @@ line-ending = "auto"
 
 docstring-code-format = true
 
-docstring-code-line-length = "dynamic"
-{% endif %}
-
+docstring-code-line-length = "dynamic"{% endif %}
 {% if is_mypy %}
 # ===============
 # mypy
@@ -135,5 +126,4 @@ warn_no_return = true
 warn_unreachable = true
 strict_optional = true
 namespace_packages = true
-explicit_package_bases = true
-{% endif %}
+explicit_package_bases = true{% endif %}
