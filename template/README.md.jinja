@@ -29,9 +29,8 @@ uv add --dev pytest
 
 ```bash
 uv run pytest
-```
+```{% if is_ruff %}
 
-{% if is_ruff %}
 ## Run ruff
 
 ```bash
@@ -41,10 +40,8 @@ uv add --dev ruff
 ```bash
 uv run ruff check .
 uv run ruff format .
-```
-{% endif %}
+```{% endif %}{% if is_mypy %}
 
-{% if is_mypy %}
 ## Run mypy
 
 ```bash
@@ -53,5 +50,4 @@ uv add --dev mypy
 
 ```bash
 uv run mypy .
-```
-{% endif %}
+```{% endif %}
