@@ -13,13 +13,13 @@ uv tool install copier
 
 From anywhere in your terminal, run:
 ```bash
-copier https://github.com/AlexTraveylan/copier-template-python.git .
+copier copy https://github.com/AlexTraveylan/copier-template-python.git .
 ```
 
 or
 
 ```bash
-copier https://github.com/AlexTraveylan/copier-template-python.git path/to/destination
+copier copy https://github.com/AlexTraveylan/copier-template-python.git path/to/destination
 ```
 
 ## Contributing

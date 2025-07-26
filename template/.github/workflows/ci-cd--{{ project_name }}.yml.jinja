@@ -64,9 +64,9 @@ jobs:
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
         # Determine version update type
-        if echo "${{ github.event.head_commit.message }}" | grep -q "#major"; then
+        if echo "${{{{ github.event.head_commit.message }}}}" | grep -q "#major"; then
           VERSION_TYPE="major"
-        elif echo "${{ github.event.head_commit.message }}" | grep -q "#minor"; then
+        elif echo "${{{{ github.event.head_commit.message }}}}" | grep -q "#minor"; then
           VERSION_TYPE="minor"
         else
           VERSION_TYPE="patch"
