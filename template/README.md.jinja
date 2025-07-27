@@ -7,26 +7,18 @@
 ## Launch
 
 ```bash
+git init
 uv sync
+uv run pre-commit install
 uv run main.py
 ```
 
 ## Pre-commit hooks
-
-```bash
-uv add --dev pre-commit
-```
-
 ```bash
 pre-commit install
 ```
 
 ## Run tests
-
-```bash
-uv add --dev pytest
-```
-
 ```bash
 uv run pytest
 ```{% if is_ruff %}
@@ -34,19 +26,11 @@ uv run pytest
 ## Run ruff
 
 ```bash
-uv add --dev ruff
-```
-
-```bash
 uv run ruff check .
 uv run ruff format .
 ```{% endif %}{% if is_mypy %}
 
 ## Run mypy
-
-```bash
-uv add --dev mypy
-```
 
 ```bash
 uv run mypy .
