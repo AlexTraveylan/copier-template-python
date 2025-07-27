@@ -1,5 +1,7 @@
 # IDEs and Editors, assume vscode or cursor are used
 .idea/
+.vscode/
+.cursor/
 *.swp
 *.swo
 *~
