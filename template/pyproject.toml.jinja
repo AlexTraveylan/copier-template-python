@@ -10,7 +10,8 @@ dependencies = []
 dev = [
     "pytest",{% if is_ruff %}
     "ruff",{% endif %}{% if is_mypy %}
-    "mypy",{% endif %}
+    "mypy",{% endif %}{% if python_version | float > 3.11 %}
+    "pre-commit",{% endif %}
 ]{% if is_pytest %}
 
 # ===============
