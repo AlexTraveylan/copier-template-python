@@ -1,6 +1,6 @@
 [project]
 name = "copier-template-python"
-version = "0.1.10"
+version = "0.1.11"
 description = "A flexible python template with copier."
 readme = "README.md"
 requires-python = ">=3.13"
